@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!-- Neutral Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#B0B0B0</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="dark_gray">#333333</color>
+
+    <!-- Status Colors -->
+    <color name="green">#4CAF50</color> <!-- For positive change -->
+    <color name="red">#F44336</color>   <!-- For negative change -->
+    <color name="blue">#2196F3</color>  <!-- For neutral/info -->
+
+    <!-- Custom App Colors -->
+    <color name="app_primary">#673AB7</color> <!-- Deep Purple -->
+    <color name="app_primary_dark">#512DA8</color>
+    <color name="app_accent">#7C4DFF</color> <!-- Lighter Purple for accent -->
+    <color name="app_background">#F0F2F5</color> <!-- Off-white/light gray -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="gradient_start">#6A1B9A</color>
+    <color name="gradient_end">#AB47BC</color>
+
+    <!-- Yada Gradient Colors for Bottom Nav Center Button -->
+    <color name="yada_gradient_start">#7C4DFF</color> <!-- Lighter Purple -->
+    <color name="yada_gradient_end">#673AB7</color>   <!-- Deep Purple -->
+</resources>

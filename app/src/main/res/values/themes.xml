@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.YADATracker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/app_primary</item>
+        <item name="colorPrimaryVariant">@color/app_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/app_accent</item>
+        <item name="colorSecondaryVariant">@color/app_accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Removed: <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item> -->
+    </style>
+
+    <!-- Optionally, if you have a DayNight.NoActionBar.Bridge or other specific themes -->
+</resources>
