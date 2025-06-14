@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
 
         val fragment: Fragment = when (tabId) {
             "coins" -> CoinsFragment()
-            "gold-exchange" -> GoldExchangeFragment()
+            "Goldexchange" -> GoldExchangeFragment()
             "bourse" -> BourseFragment()
             "crypto" -> CryptoFragment()
             "home" -> HomeFragment() // Load HomeFragment for the main content
