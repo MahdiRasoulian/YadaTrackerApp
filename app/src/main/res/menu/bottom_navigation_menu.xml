@@ -7,7 +7,7 @@
 
     <item
         android:id="@+id/nav_exchange_rate"
-        android:icon="@drawable/ic_exchangerate"
+        android:icon="@drawable/ic_gold_exchange"
         android:title="Gold Exchange" />
 
     <item
@@ -16,12 +16,12 @@
         android:title="Home" />
 
     <item
-        android:id="@+id/nav_gold_ounce"
-        android:icon="@drawable/ic_gold_ounce"
+        android:id="@+id/nav_bourse"
+        android:icon="@drawable/ic_bourse"
         android:title="Gold Ounce" />
 
     <item
         android:id="@+id/nav_crypto"
-        android:icon="@drawable/ic_cryptocurrencies"
+        android:icon="@drawable/ic_crypto"
         android:title="Crypto" />
 </menu>

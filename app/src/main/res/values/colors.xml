@@ -31,6 +31,15 @@
     <color name="gradient_end">#AB47BC</color>
 
     <!-- Yada Gradient Colors for Bottom Nav Center Button -->
-    <color name="yada_gradient_start">#7C4DFF</color> <!-- Lighter Purple -->
+    <color name="yada_gradient_start">#CBC3E3</color> <!-- Lighter Purple -->
     <color name="yada_gradient_end">#673AB7</color>   <!-- Deep Purple -->
+
+    <color name="text_muted_foreground">#757575</color>
+    <color name="background_card">#FFFFFF</color>
+    <color name="border_color">#EEEEEE</color>
+    <color name="primary_10_percent_opacity">#1A673AB7</color>
+
+
+
+
 </resources>
