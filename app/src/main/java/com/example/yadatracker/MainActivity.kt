@@ -11,8 +11,8 @@ import androidx.fragment.app.Fragment
 import com.example.yadatracker.fragments.BourseFragment
 import com.example.yadatracker.fragments.CoinsFragment
 import com.example.yadatracker.fragments.CryptoFragment
-import com.example.yadatracker.fragments.GoldExchangeFragment
-import com.example.yadatracker.fragments.HomeFragment // Import the new HomeFragment
+import com.example.yadatracker.fragments.GoldExchangeFragment // Keep GoldExchangeFragment for now
+import com.example.yadatracker.fragments.HomeFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,18 +21,18 @@ class MainActivity : AppCompatActivity() {
     private lateinit var iconCoins: ImageView
     private lateinit var labelCoins: TextView
 
-    private lateinit var tabGoldExchange: LinearLayout
-    private lateinit var iconGoldExchange: ImageView
-    private lateinit var labelGoldExchange: TextView
+    // Renamed for consistency with menu item ID and new XML IDs
+    private lateinit var tabExchangeRate: LinearLayout
+    private lateinit var iconExchangeRate: ImageView
+    private lateinit var labelExchangeRate: TextView
 
-    private lateinit var tabHome: LinearLayout // This is the tabHome being referenced
-    private lateinit var iconHome: ImageView // This is the iconHome being referenced
-    private lateinit var labelHome: TextView // This is the labelHome being referenced
+    private lateinit var tabHome: LinearLayout
+    private lateinit var iconHome: ImageView
+    private lateinit var labelHome: TextView
 
-    // Renamed from Gold Ounce to Bourse
     private lateinit var tabBourse: LinearLayout
     private lateinit var iconBourse: ImageView
-    private lateinit var labelBourse: TextView // CORRECTED: Removed extra 'var' keyword
+    private lateinit var labelBourse: TextView
 
     private lateinit var tabCrypto: LinearLayout
     private lateinit var iconCrypto: ImageView
@@ -49,16 +49,15 @@ class MainActivity : AppCompatActivity() {
         iconCoins = findViewById(R.id.icon_coins)
         labelCoins = findViewById(R.id.label_coins)
 
-        tabGoldExchange = findViewById(R.id.tab_gold_exchange)
-        iconGoldExchange = findViewById(R.id.icon_gold_exchange)
-        labelGoldExchange = findViewById(R.id.label_gold_exchange)
+        // Initialize Exchange Rate tab with new IDs
+        tabExchangeRate = findViewById(R.id.tab_exchange_rate)
+        iconExchangeRate = findViewById(R.id.icon_exchange_rate)
+        labelExchangeRate = findViewById(R.id.label_exchange_rate)
 
-        // These are correct references to elements in activity_main.xml
         tabHome = findViewById(R.id.tab_home)
         iconHome = findViewById(R.id.icon_home)
         labelHome = findViewById(R.id.label_home)
 
-        // Initialize Bourse tab (formerly Gold Ounce)
         tabBourse = findViewById(R.id.tab_bourse)
         iconBourse = findViewById(R.id.icon_bourse)
         labelBourse = findViewById(R.id.label_bourse)
@@ -69,20 +68,25 @@ class MainActivity : AppCompatActivity() {
 
         // Set up custom Bottom Navigation listeners
         tabCoins.setOnClickListener { selectTab("coins") }
-        tabGoldExchange.setOnClickListener { selectTab("gold-exchange") }
+        // Corrected the string ID to match the new XML ID and for future consistency
+        tabExchangeRate.setOnClickListener { selectTab("exchange-rate") }
         tabHome.setOnClickListener { selectTab("home") }
         tabBourse.setOnClickListener { selectTab("bourse") }
         tabCrypto.setOnClickListener { selectTab("crypto") }
 
         // Initial selection and UI update for bottom nav
         if (savedInstanceState == null) {
-            selectTab(activeTab) // Load home fragment initially
+            // Load the default fragment (e.g., Home or Exchange)
+            // If you want "Exchange" to be the initial tab, set it here:
+            // selectTab("exchange-rate")
+            // Otherwise, keep it as "home" or your desired initial tab
+            selectTab(activeTab) // Loads home fragment initially based on activeTab default
         }
     }
 
     private fun selectTab(tabId: String) {
+        // Allow re-selecting home to refresh, but prevent unnecessary reloads for others
         if (activeTab == tabId && tabId != "home") {
-            // If the same tab (and not home) is clicked, do nothing
             return
         }
 
@@ -91,11 +95,11 @@ class MainActivity : AppCompatActivity() {
 
         val fragment: Fragment = when (tabId) {
             "coins" -> CoinsFragment()
-            "Goldexchange" -> GoldExchangeFragment()
+            "exchange-rate" -> GoldExchangeFragment() // Corrected string ID to match the click listener
             "bourse" -> BourseFragment()
             "crypto" -> CryptoFragment()
-            "home" -> HomeFragment() // Load HomeFragment for the main content
-            else -> HomeFragment() // Default to HomeFragment
+            "home" -> HomeFragment()
+            else -> HomeFragment() // Default to HomeFragment for any unhandled tabId
         }
 
         supportFragmentManager.beginTransaction()
@@ -106,9 +110,9 @@ class MainActivity : AppCompatActivity() {
     private fun updateTabAppearance() {
         val tabs = mapOf(
             "coins" to Pair(tabCoins, iconCoins to labelCoins),
-            "gold-exchange" to Pair(tabGoldExchange, iconGoldExchange to labelGoldExchange),
+            "exchange-rate" to Pair(tabExchangeRate, iconExchangeRate to labelExchangeRate), // Updated with new IDs
             "home" to Pair(tabHome, iconHome to labelHome),
-            "bourse" to Pair(tabBourse, iconBourse to labelBourse), // Updated to Bourse
+            "bourse" to Pair(tabBourse, iconBourse to labelBourse),
             "crypto" to Pair(tabCrypto, iconCrypto to labelCrypto)
         )
 

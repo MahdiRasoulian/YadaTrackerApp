@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Yada Tracker</string>
     <string name="coins_tab">Coins</string>
-    <string name="gold_exchange_tab">Gold Exchange</string>
+    <string name="exchange_tab">Exchange</string>
     <string name="home_tab">Home</string>
     <string name="gold_ounce_tab">Gold Ounce</string>
     <string name="crypto_tab">Crypto</string>

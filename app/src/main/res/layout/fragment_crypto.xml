@@ -31,7 +31,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:columnCount="2"
-            android:rowCount="6"
+            android:rowCount="5"
             android:alignmentMode="alignBounds"
             android:columnOrderPreserved="false"
             android:rowOrderPreserved="false"
@@ -42,7 +42,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvCryptoTitle">
 
-            <!-- Row 0 -->
+            <!-- Row 0 - Bitcoin -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardBitcoin"
                 android:layout_width="0dp"
@@ -62,13 +62,28 @@
                     android:orientation="vertical"
                     android:padding="12dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="₿ Bitcoin"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/text_primary" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₿ Bitcoin"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" BTC"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray"
+                            android:layout_marginStart="4dp" />
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/tvBitcoinPrice"
@@ -92,6 +107,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <!-- Row 0 - Ethereum -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardEthereum"
                 android:layout_width="0dp"
@@ -111,13 +127,28 @@
                     android:orientation="vertical"
                     android:padding="12dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="𖢻 Ethereum"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/text_primary" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="𖢻 Ethereum"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" ETH"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray"
+                            android:layout_marginStart="4dp" />
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/tvEthereumPrice"
@@ -141,9 +172,9 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Row 1 -->
+            <!-- Row 1 - XRP -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardTether"
+                android:id="@+id/cardXRP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -161,62 +192,28 @@
                     android:orientation="vertical"
                     android:padding="12dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="💰 Tether"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/text_primary" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
 
-                    <TextView
-                        android:id="@+id/tvTetherPrice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="-- USD"
-                        android:textSize="18sp"
-                        android:textColor="@color/app_primary"
-                        android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="✕ XRP"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
 
-                    <TextView
-                        android:id="@+id/tvTetherChange"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="--%"
-                        android:textSize="14sp"
-                        android:textColor="@color/text_secondary"
-                        android:layout_marginTop="2dp" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardXRP"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_column="1"
-                android:layout_row="1"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="6dp"
-                app:cardBackgroundColor="@color/card_background">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="12dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="💰 XRP"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/text_primary" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" XRP"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray"
+                            android:layout_marginStart="4dp" />
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/tvXRPPrice"
@@ -240,15 +237,15 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Row 2 -->
+            <!-- Row 1 - Binance Coin -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardBinanceCoin"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_column="0"
-                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_row="1"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="6dp"
@@ -260,13 +257,28 @@
                     android:orientation="vertical"
                     android:padding="12dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="💰 Binance Coin"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/text_primary" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🔶 Binance Coin"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" BNB"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray"
+                            android:layout_marginStart="4dp" />
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/tvBinanceCoinPrice"
@@ -290,13 +302,14 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <!-- Row 2 - Solana -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardSolana"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_column="1"
+                android:layout_column="0"
                 android:layout_row="2"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="16dp"
@@ -309,13 +322,28 @@
                     android:orientation="vertical"
                     android:padding="12dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="💰 Solana"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/text_primary" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="◎ Solana"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" SOL"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray"
+                            android:layout_marginStart="4dp" />
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/tvSolanaPrice"
@@ -339,56 +367,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Row 3 -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardUSDCoin"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_column="0"
-                android:layout_row="3"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="6dp"
-                app:cardBackgroundColor="@color/card_background">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="12dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="💰 USD Coin"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/text_primary" />
-
-                    <TextView
-                        android:id="@+id/tvUSDCoinPrice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="-- USD"
-                        android:textSize="18sp"
-                        android:textColor="@color/app_primary"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvUSDCoinChange"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="--%"
-                        android:textSize="14sp"
-                        android:textColor="@color/text_secondary"
-                        android:layout_marginTop="2dp" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
+            <!-- Row 2 - Dogecoin -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardDogecoin"
                 android:layout_width="0dp"
@@ -396,7 +375,7 @@
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_column="1"
-                android:layout_row="3"
+                android:layout_row="2"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="6dp"
@@ -408,13 +387,28 @@
                     android:orientation="vertical"
                     android:padding="12dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="💰 Dogecoin"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/text_primary" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ɖ Dogecoin"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" DOGE"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray"
+                            android:layout_marginStart="4dp" />
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/tvDogecoinPrice"
@@ -438,7 +432,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Row 4 -->
+            <!-- Row 3 - TRON -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardTRON"
                 android:layout_width="0dp"
@@ -446,7 +440,7 @@
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_column="0"
-                android:layout_row="4"
+                android:layout_row="3"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="6dp"
@@ -458,13 +452,28 @@
                     android:orientation="vertical"
                     android:padding="12dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="💰 TRON"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/text_primary" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⬡ TRON"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" TRX"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray"
+                            android:layout_marginStart="4dp" />
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/tvTRONPrice"
@@ -488,6 +497,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <!-- Row 3 - Sui -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardSui"
                 android:layout_width="0dp"
@@ -495,7 +505,7 @@
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_column="1"
-                android:layout_row="4"
+                android:layout_row="3"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="6dp"
@@ -507,13 +517,28 @@
                     android:orientation="vertical"
                     android:padding="12dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="💰 Sui"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/text_primary" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="💧 Sui"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" SUI"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray"
+                            android:layout_marginStart="4dp" />
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/tvSuiPrice"
@@ -537,7 +562,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Row 5 -->
+            <!-- Row 4 - Litecoin -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardLitecoin"
                 android:layout_width="0dp"
@@ -545,7 +570,7 @@
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_column="0"
-                android:layout_row="5"
+                android:layout_row="4"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="6dp"
@@ -557,13 +582,28 @@
                     android:orientation="vertical"
                     android:padding="12dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="💰 Litecoin"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/text_primary" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ł Litecoin"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" LTC"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray"
+                            android:layout_marginStart="4dp" />
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/tvLitecoinPrice"
@@ -587,6 +627,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <!-- Row 4 - Toncoin -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardToncoin"
                 android:layout_width="0dp"
@@ -594,7 +635,7 @@
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_column="1"
-                android:layout_row="5"
+                android:layout_row="4"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="6dp"
@@ -606,13 +647,28 @@
                     android:orientation="vertical"
                     android:padding="12dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="💰 Toncoin"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/text_primary" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="💎 Toncoin"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" TON"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray"
+                            android:layout_marginStart="4dp" />
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/tvToncoinPrice"

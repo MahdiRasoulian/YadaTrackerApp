@@ -25,16 +25,12 @@ class CryptoFragment : Fragment() {
     private lateinit var tvBitcoinChange: TextView
     private lateinit var tvEthereumPrice: TextView
     private lateinit var tvEthereumChange: TextView
-    private lateinit var tvTetherPrice: TextView
-    private lateinit var tvTetherChange: TextView
     private lateinit var tvXRPPrice: TextView
     private lateinit var tvXRPChange: TextView
     private lateinit var tvBinanceCoinPrice: TextView
     private lateinit var tvBinanceCoinChange: TextView
     private lateinit var tvSolanaPrice: TextView
     private lateinit var tvSolanaChange: TextView
-    private lateinit var tvUSDCoinPrice: TextView
-    private lateinit var tvUSDCoinChange: TextView
     private lateinit var tvDogecoinPrice: TextView
     private lateinit var tvDogecoinChange: TextView
     private lateinit var tvTRONPrice: TextView
@@ -68,16 +64,12 @@ class CryptoFragment : Fragment() {
         tvBitcoinChange = view.findViewById(R.id.tvBitcoinChange)
         tvEthereumPrice = view.findViewById(R.id.tvEthereumPrice)
         tvEthereumChange = view.findViewById(R.id.tvEthereumChange)
-        tvTetherPrice = view.findViewById(R.id.tvTetherPrice)
-        tvTetherChange = view.findViewById(R.id.tvTetherChange)
         tvXRPPrice = view.findViewById(R.id.tvXRPPrice)
         tvXRPChange = view.findViewById(R.id.tvXRPChange)
         tvBinanceCoinPrice = view.findViewById(R.id.tvBinanceCoinPrice)
         tvBinanceCoinChange = view.findViewById(R.id.tvBinanceCoinChange)
         tvSolanaPrice = view.findViewById(R.id.tvSolanaPrice)
         tvSolanaChange = view.findViewById(R.id.tvSolanaChange)
-        tvUSDCoinPrice = view.findViewById(R.id.tvUSDCoinPrice)
-        tvUSDCoinChange = view.findViewById(R.id.tvUSDCoinChange)
         tvDogecoinPrice = view.findViewById(R.id.tvDogecoinPrice)
         tvDogecoinChange = view.findViewById(R.id.tvDogecoinChange)
         tvTRONPrice = view.findViewById(R.id.tvTRONPrice)
@@ -201,11 +193,9 @@ class CryptoFragment : Fragment() {
                     // Bitcoin is handled by the root object, so it's generally excluded here to avoid overwriting
                     when (name) {
                         "Ethereum" -> updateCryptoItemUI(price, changePercent, unit, tvEthereumPrice, tvEthereumChange)
-                        "Tether" -> updateCryptoItemUI(price, changePercent, unit, tvTetherPrice, tvTetherChange)
                         "XRP" -> updateCryptoItemUI(price, changePercent, unit, tvXRPPrice, tvXRPChange)
                         "Binance Coin" -> updateCryptoItemUI(price, changePercent, unit, tvBinanceCoinPrice, tvBinanceCoinChange)
                         "Solana" -> updateCryptoItemUI(price, changePercent, unit, tvSolanaPrice, tvSolanaChange)
-                        "USD Coin" -> updateCryptoItemUI(price, changePercent, unit, tvUSDCoinPrice, tvUSDCoinChange)
                         "Dogecoin" -> updateCryptoItemUI(price, changePercent, unit, tvDogecoinPrice, tvDogecoinChange)
                         "TRON" -> updateCryptoItemUI(price, changePercent, unit, tvTRONPrice, tvTRONChange)
                         "Sui" -> updateCryptoItemUI(price, changePercent, unit, tvSuiPrice, tvSuiChange)
@@ -268,11 +258,9 @@ class CryptoFragment : Fragment() {
         // Update Bitcoin first, then others
         updateCryptoItemUI(Double.NaN, Double.NaN, defaultUnit, tvBitcoinPrice, tvBitcoinChange)
         updateCryptoItemUI(Double.NaN, Double.NaN, defaultUnit, tvEthereumPrice, tvEthereumChange)
-        updateCryptoItemUI(Double.NaN, Double.NaN, defaultUnit, tvTetherPrice, tvTetherChange)
         updateCryptoItemUI(Double.NaN, Double.NaN, defaultUnit, tvXRPPrice, tvXRPChange)
         updateCryptoItemUI(Double.NaN, Double.NaN, defaultUnit, tvBinanceCoinPrice, tvBinanceCoinChange)
         updateCryptoItemUI(Double.NaN, Double.NaN, defaultUnit, tvSolanaPrice, tvSolanaChange)
-        updateCryptoItemUI(Double.NaN, Double.NaN, defaultUnit, tvUSDCoinPrice, tvUSDCoinChange)
         updateCryptoItemUI(Double.NaN, Double.NaN, defaultUnit, tvDogecoinPrice, tvDogecoinChange)
         updateCryptoItemUI(Double.NaN, Double.NaN, defaultUnit, tvTRONPrice, tvTRONChange)
         updateCryptoItemUI(Double.NaN, Double.NaN, defaultUnit, tvSuiPrice, tvSuiChange)

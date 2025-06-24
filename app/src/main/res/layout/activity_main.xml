@@ -11,147 +11,149 @@
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/bottom_nav_height" /> <LinearLayout
-    android:id="@+id/bottom_navigation_container"
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/bottom_nav_height"
-    android:layout_gravity="bottom"
-    android:orientation="horizontal"
-    android:background="@color/background_card"
-    android:paddingTop="8dp"
-    android:paddingBottom="8dp"
-    android:elevation="8dp">
+        android:layout_marginBottom="@dimen/bottom_nav_height" />
 
     <LinearLayout
-        android:id="@+id/tab_coins"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="?attr/selectableItemBackgroundBorderless">
-        <ImageView
-            android:id="@+id/icon_coins"
-            android:layout_width="@dimen/normal_icon_size"
-            android:layout_height="@dimen/normal_icon_size"
-            android:src="@drawable/ic_coins"
-            android:contentDescription="@string/coins_tab" />
-        <TextView
-            android:id="@+id/label_coins"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/coins_tab"
-            android:textSize="12sp"
-            android:fontFamily="sans-serif-medium"
-            android:layout_marginTop="2dp" />
-    </LinearLayout>
+        android:id="@+id/bottom_navigation_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_nav_height"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:background="@color/background_card"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:elevation="8dp">
 
-    <LinearLayout
-        android:id="@+id/tab_gold_exchange"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="?attr/selectableItemBackgroundBorderless">
-        <ImageView
-            android:id="@+id/icon_gold_exchange"
-            android:layout_width="@dimen/normal_icon_size"
-            android:layout_height="@dimen/normal_icon_size"
-            android:src="@drawable/ic_gold_exchange"
-            android:contentDescription="@string/gold_exchange_tab" />
-        <TextView
-            android:id="@+id/label_gold_exchange"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/gold_exchange_tab"
-            android:textSize="12sp"
-            android:fontFamily="sans-serif-medium"
-            android:layout_marginTop="2dp" />
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/tab_coins"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless">
+            <ImageView
+                android:id="@+id/icon_coins"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:src="@drawable/ic_coins"
+                android:contentDescription="@string/coins_tab" />
+            <TextView
+                android:id="@+id/label_coins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/coins_tab"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/tab_home"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="@drawable/home_tab_background">
-        <ImageView
-            android:id="@+id/icon_home"
-            android:layout_width="@dimen/home_icon_size"
-            android:layout_height="@dimen/home_icon_size"
-            android:src="@drawable/ic_home"
-            android:contentDescription="@string/home_tab" />
-        <TextView
-            android:id="@+id/label_home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/home_tab"
-            android:textSize="12sp"
-            android:fontFamily="sans-serif-medium"
-            android:layout_marginTop="2dp" />
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/tab_exchange_rate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless">
+            <ImageView
+                android:id="@+id/icon_exchange_rate"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:src="@drawable/ic_gold_exchange"
+                android:contentDescription="@string/exchange_tab" />
+            <TextView
+                android:id="@+id/label_exchange_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exchange_tab"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/tab_bourse"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="?attr/selectableItemBackgroundBorderless">
-        <ImageView
-            android:id="@+id/icon_bourse"
-            android:layout_width="@dimen/normal_icon_size"
-            android:layout_height="@dimen/normal_icon_size"
-            android:src="@drawable/ic_bourse"
-            android:contentDescription="@string/bourse_tab" />
-        <TextView
-            android:id="@+id/label_bourse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/bourse_tab"
-            android:textSize="12sp"
-            android:fontFamily="sans-serif-medium"
-            android:layout_marginTop="2dp" />
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/tab_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/home_tab_background">
+            <ImageView
+                android:id="@+id/icon_home"
+                android:layout_width="@dimen/home_icon_size"
+                android:layout_height="@dimen/home_icon_size"
+                android:src="@drawable/ic_home"
+                android:contentDescription="@string/home_tab" />
+            <TextView
+                android:id="@+id/label_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_tab"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/tab_crypto"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="?attr/selectableItemBackgroundBorderless">
-        <ImageView
-            android:id="@+id/icon_crypto"
-            android:layout_width="@dimen/normal_icon_size"
-            android:layout_height="@dimen/normal_icon_size"
-            android:src="@drawable/ic_crypto"
-            android:contentDescription="@string/crypto_tab" />
-        <TextView
-            android:id="@+id/label_crypto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/crypto_tab"
-            android:textSize="12sp"
-            android:fontFamily="sans-serif-medium"
-            android:layout_marginTop="2dp" />
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/tab_bourse"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless">
+            <ImageView
+                android:id="@+id/icon_bourse"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:src="@drawable/ic_bourse"
+                android:contentDescription="@string/bourse_tab" />
+            <TextView
+                android:id="@+id/label_bourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bourse_tab"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
 
-</LinearLayout>
+        <LinearLayout
+            android:id="@+id/tab_crypto"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless">
+            <ImageView
+                android:id="@+id/icon_crypto"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:src="@drawable/ic_crypto"
+                android:contentDescription="@string/crypto_tab" />
+            <TextView
+                android:id="@+id/label_crypto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/crypto_tab"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
